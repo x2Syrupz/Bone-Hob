@@ -5,6 +5,9 @@ do
    end
 end
 ---------------------------
+local Mirage_Notify = require(game.ReplicatedStorage.Notification)
+Mirage_Notify.new("<Color=White><Mirage Island><Color=/>"):Display();
+---------------------------
 local ID = 11258427457
 local Mirage = game:GetObjects("rbxassetid://"..ID)[1]
 Mirage.Parent = workspace.Map
