@@ -418,7 +418,7 @@ infoTemplateCorner.Parent = infoTemplateFrame
 
 messageTemplate.Name = "message"
 messageTemplate.AnchorPoint = Vector2.new(1, 1)
-messageTemplate.BackgroundColor3 = Color3.fromRGB(233, 233, 235)
+messageTemplate.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageTemplate.BorderSizePixel = 0
 messageTemplate.BackgroundTransparency = 1
 messageTemplate.Position = UDim2.new(1, 0, 1, -100)
@@ -426,7 +426,7 @@ messageTemplate.Size = UDim2.new(1, 0, 0, 40)
 
 messageTemplateFrame.Name = "templateFrame"
 messageTemplateFrame.Parent = messageTemplate
-messageTemplateFrame.BackgroundColor3 = Color3.fromRGB(233, 233, 235)
+messageTemplateFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageTemplateFrame.BorderSizePixel = 0
 messageTemplateFrame.Size = UDim2.new(1, 0, 1, 0)
 
@@ -443,14 +443,14 @@ messageSeverityCorner.Parent = messageSeverityFrame
 
 hideMessageSeverityCornerFrame.Name = "hideSeverityCornerFrame"
 hideMessageSeverityCornerFrame.Parent = messageSeverityFrame
-hideMessageSeverityCornerFrame.BackgroundColor3 = Color3.fromRGB(233, 233, 235)
+hideMessageSeverityCornerFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 hideMessageSeverityCornerFrame.BorderSizePixel = 0
 hideMessageSeverityCornerFrame.Position = UDim2.new(0.5, 0, 0, 0)
 hideMessageSeverityCornerFrame.Size = UDim2.new(0.5, 0, 1, 0)
 
 messageInformationFrame.Name = "informationFrame"
 messageInformationFrame.Parent = messageTemplateFrame
-messageInformationFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+messageInformationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageInformationFrame.BackgroundTransparency = 1
 messageInformationFrame.BorderSizePixel = 0
 messageInformationFrame.Position = UDim2.new(0, 15, 0, 0)
@@ -465,7 +465,7 @@ messageHeadingText.ClipsDescendants = true
 messageHeadingText.Size = UDim2.new(1, 0, 0, 20)
 messageHeadingText.Font = Enum.Font.GothamBold
 messageHeadingText.Text = "Custom message"
-messageHeadingText.TextColor3 = Color3.fromRGB(0, 0, 0)
+messageHeadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
 messageHeadingText.TextSize = 14
 messageHeadingText.TextXAlignment = Enum.TextXAlignment.Left
 messageHeadingText.TextYAlignment = Enum.TextYAlignment.Bottom
@@ -480,7 +480,7 @@ messageBodyText.Position = UDim2.new(0, 0, 0, 20)
 messageBodyText.Size = UDim2.new(1, 0, 1, -20)
 messageBodyText.Font = Enum.Font.GothamSemibold
 messageBodyText.Text = "Custom message"
-messageBodyText.TextColor3 = Color3.fromRGB(0, 0, 0)
+messageBodyText.TextColor3 = Color3.fromRGB(255, 255, 255)
 messageBodyText.TextSize = 14
 messageBodyText.TextWrapped = true
 messageBodyText.TextXAlignment = Enum.TextXAlignment.Left
