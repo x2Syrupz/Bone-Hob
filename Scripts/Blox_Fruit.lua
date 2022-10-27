@@ -1,3 +1,8 @@
+_G.Config_Settings = {
+    Automatic_Farm = false,
+    Automatic_Farm_Chest = false,
+    White_Screen = false,
+}
 if _G.Fast_Delay == nil then
 	_G.Fast_Delay = 0.3
 end
