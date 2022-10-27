@@ -427,18 +427,22 @@ messageTemplate.Size = UDim2.new(1, 0, 0, 40)
 messageTemplateFrame.Name = "templateFrame"
 messageTemplateFrame.Parent = messageTemplate
 messageTemplateFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+messageTemplateFrame.BackgroundTransparency = 0
 messageTemplateFrame.BorderSizePixel = 0
 messageTemplateFrame.Size = UDim2.new(1, 0, 1, 0)
 
 messageTemplateCorner.Name = "templateCorner"
+messageTemplateCorner.CornerRadius = UDim.new(0, 4)
 messageTemplateCorner.Parent = messageTemplateFrame
 
 messageSeverityFrame.Name = "severityFrame"
 messageSeverityFrame.Parent = messageTemplateFrame
-messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(112, 118, 130)
+messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+messageSeverityFrame.BackgroundTransparency = 0
 messageSeverityFrame.Size = UDim2.new(0, 10, 1, 0)
 
 messageSeverityCorner.Name = "severityCorner"
+messageSeverityCorner.CornerRadius = UDim.new(0, 4)
 messageSeverityCorner.Parent = messageSeverityFrame
 
 hideMessageSeverityCornerFrame.Name = "hideSeverityCornerFrame"
