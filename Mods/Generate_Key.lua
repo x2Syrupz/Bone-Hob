@@ -1,5 +1,5 @@
 getgenv().generateKey = function(let,cap,num,numamount,length,copy,prnt,speak,prefix)
-   --Locals
+   makefolder("Generate Keys")
    local plr = game.Players.LocalPlayer
    let = let or true
    cap = cap or true
@@ -37,13 +37,14 @@ getgenv().generateKey = function(let,cap,num,numamount,length,copy,prnt,speak,pr
        
        --Custom Checks
        if copy then
-           setclipboard(realKey)
+           --setclipboard(realKey)
        end
        if speak then
-           wait(1)
-           talk("Generating Key [" .. plr.Name .. "]")
-           wait(.6)
-           talk(realKey)
+           --wait(1)
+           --talk("Generating Key [" .. plr.Name .. "]")
+           --wait(.6)
+           --talk(realKey)
+           writefile("Generate Keys/"..math.random(1,10) .. ".txt", realKey)
        end
        if prnt then
            print(realKey)
