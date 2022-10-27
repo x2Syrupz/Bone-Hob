@@ -435,7 +435,7 @@ messageTemplateCorner.Parent = messageTemplateFrame
 
 messageSeverityFrame.Name = "severityFrame"
 messageSeverityFrame.Parent = messageTemplateFrame
-messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(112, 118, 130)
+messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageSeverityFrame.Size = UDim2.new(0, 10, 1, 0)
 
 messageSeverityCorner.Name = "severityCorner"
