@@ -1,5 +1,8 @@
+getgenv().Settings = { 
+    Color = Color3.fromRGB(255,163,26),
+}
 -----------------------
-Fly = false
+Fly_Toggle_Callback = false
                                 function activatefly()
                                     local mouse=game.Players.LocalPlayer:GetMouse''
                                     localplayer=game.Players.LocalPlayer
@@ -51,7 +54,7 @@ Fly = false
                                             else
                                                 gyro.cframe = workspace.CurrentCamera.CoordinateFrame
                                             end
-                                        until not Fly
+                                        until not Fly_Toggle_Callback
                                         if gyro then
                                             gyro:Destroy()
                                         end
@@ -101,7 +104,7 @@ function isnil(thing)
 		for i,v in pairs(game:GetService'Players':GetChildren()) do
 			pcall(function()
 				if not isnil(v.Character) then
-					if PlayerESP then
+					if Player_ESP_Callback then
 						if not isnil(v.Character.Head) and not v.Character.Head:FindFirstChild('NameEsp'..Number) then
 							local bill = Instance.new('BillboardGui',v.Character.Head)
 							bill.Name = 'NameEsp'..Number
@@ -136,132 +139,162 @@ function isnil(thing)
 		end
 	end
 ----------------------
+--[[
 players = {}
  
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
-   table.insert(players,v.Name)
+   table.insert(players,v.Name) players[#players+1] = v.Name
 end
------------------------
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/UIs/Bone_UI.lua"))()
-----------------------
-local a 
-a = hookfunc(game.HttpGet,function(d,b,c)
-    if b == 'https://pastebin.com/raw/ga08GmBd' then
-        return a(d,'https://pastebin.com/raw/pV7uXeWK',c)
-    end
-    return a(d,b,c)
+--]]
+------------
+spawn(function()
+	while task.wait() do
+		pcall(function()
+		    players = {}
+ 
+            for i,v in pairs(game:GetService("Players"):GetChildren()) do
+                players[#players+1] = v.Name
+            end
+		end)
+	end
 end)
----------------------
-local Themes = {
-        MainColor = Color3.fromRGB(79, 195, 247),
-        Logo = "11318934081",
-        Sub_Logo = "10233554882"
-    }
 ----------------------
-loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Mods/Protected.lua'))()
-local Data = os.date()
-local Player_Name = game.Players.LocalPlayer.Name
-local Place_ID = game.PlaceId
-local Place_Name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
-
-_G.Settings = {
-    ColorUI = Color3.fromRGB(32,178,151),
-    Key = Enum.KeyCode.RightControl,
-}
-
-local Main = Library.create({
-	Title = "Bone Hub - "..Data,
-	ColorUI = Color3.fromRGB(0,0,0),
-	Logo = Themes.Logo
-})
-
-local Tab = Main.create({
-	Title = "Main",
-	ColorUI = Color3.fromRGB(32,178,151)
-})
-
-local Section = Tab.SectionTab({Title = "General",Logo = Themes.Logo,})
-local Section2 = Tab.SectionTab({Title = "Items",Logo = Themes.Logo,})
-local Section3 = Tab.SectionTab({Title = "Character",Logo = Themes.Logo,})
-local Section4 = Tab.SectionTab({Title = "Players",Logo = Themes.Logo,})
-local Section5 = Tab.SectionTab({Title = "Teleports",Logo = Themes.Logo,})
-local Section6 = Tab.SectionTab({Title = "Miscs",Logo = Themes.Logo,})
-local Section7 = Tab.SectionTab({Title = "Settings",Logo = Themes.Logo,})
-local Section8 = Tab.SectionTab({Title = "UI Settings",Logo = Themes.Logo,})
-local Page = Section.page()
-local Page2 = Section2.page()
-local Page3 = Section3.page()
-local Page4 = Section4.page()
-local Page5 = Section5.page()
-local Page6 = Section6.page()
-local Page7 = Section7.page()
-local Page8 = Section8.page()
-_G.Toggle = false
-Page.Label({Title = "Main"})
-Page.Line({})
-Page.Toggle({Title = "Toggle ESP",ColorUI = Themes.MainColor,Default = false,callback = function(All_ESP_Toggle)
-    PlayerESP = All_ESP_Toggle
+--[[ --Endings = {
+    "Main Ending",
+    "Bad Ending",
+    "Antidote Ending",
+    "Karen Ending",
+    "Van Ending",
+    "Suitcase Ending",
+    "Nathan Ending",
+    "Nathan Antidote Ending",
+    "Locked Up Ending",
+    "Tiny Ending",
+    "Zombie Dan Ending",
+    "Bunker Ending",
+    "Death Ending",
+    "Nuke Ending",
+    "Christmas Ending",
+    "True Ending",
+} --- ]]
+----------------------
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/UIs/Porn_UI.lua'))()
+local Window = Library:NewWindow("Bone","HUB")
+local Page_1 = Window:NewSection("General")
+local Page_2 = Window:NewSection("Items")
+local Page_3 = Window:NewSection("Players")
+local Page_4 = Window:NewSection("Travel")
+local Page_5 = Window:NewSection("Miscs")
+local Page_6 = Window:NewSection("Settings")
+---------------------------------
+Page_1:Line("Main",false)
+Page_1:Toggle("Automatic Ending [ Soon ]",function()
+end)
+Page_1:Toggle("Automatic Heal",function(Auto_Heal)
+    Auto_Heal_Callback = Auto_Heal
+    while Auto_Heal_Callback == true do
+        local A_1 = "HEAL_PLAYER"
+		local A_2 = game:GetService("Players").LocalPlayer
+		local A_3 = 999999999
+		local Event = game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction
+		Event:InvokeServer(A_1, A_2, A_3)
+    end
+end)
+Page_1:Line("",true)
+---------------------------------
+Page_2:Line("Items",false)
+Page_2:Toggle("Automatic Items",function(Auto_Items)
+    Auto_Items_Callback = Auto_Items
+    while Auto_Items_Callback == true do task.wait()
+        game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Donut")
+        task.wait(0.1)
+        game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Bandage")
+        task.wait(0.1)
+        game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","MedKit")
+    end
+end)
+Page_2:Button("Get Donut",function()
+    local A_1 = "PICKUP_ITEM"
+	local A_2 = "Donut"
+	local Event = game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Page_2:Button("Get Bandage",function()
+    local A_1 = "PICKUP_ITEM"
+	local A_2 = "Bandage"
+	local Event = game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Page_2:Button("Get Medkit",function()
+    local A_1 = "PICKUP_ITEM"
+	local A_2 = "MedKit"
+	local Event = game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction
+	Event:InvokeServer(A_1, A_2)
+end)
+Page_2:Line("",true)
+---------------------------------
+Page_3:Line("Characters",false)
+Page_3:Toggle("Boost WalkSpeed [ +50% ]",function(WalkSpeed)
+    WalkSpeed_Callback = WalkSpeed
+    while WalkSpeed_Callback == true do task.wait()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    end
+    while WalkSpeed_Callback == false do task.wait()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+Page_3:Toggle("Boost JumpPower [ +50% ]",function(JumpPower)
+    JumpPower_Callback = JumpPower
+    while JumpPower_Callback == true do task.wait()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+    end
+    while JumpPower_Callback == false do task.wait()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+Page_3:Line("Player Teleports",false)
+Page_3:Toggle("Teleport Player",function(Teleport_Player_Toggle)
+    Teleport_Player_Toggle_Callback = Teleport_Player_Toggle
+    while Teleport_Player_Toggle_Callback == true do task.wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select_Player_Callback].Character.HumanoidRootPart.CFrame
+    end
+end)
+local p_drop = Page_3:Dropdown("Select Player",players,function(Select_Player)
+    Select_Player_Callback = Select_Player
+end)
+Page_3:Button("Teleport Select",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select_Player_Callback].Character.HumanoidRootPart.CFrame
+end)
+Page_3:Button("Refresh Player",function()
+    p_drop:Refresh(players)
+end)
+Page_3:Line("ESPs",false)
+Page_3:Toggle("Toggle Player ESP",function(Player_ESP)
+    Player_ESP_Callback = Player_ESP
     UpdatePlayerChams()
-end,})
-Page.Toggle({Title = "Automatic Heal All",ColorUI = Themes.MainColor,Default = false,callback = function(Auto_Heal_All)
-    _G.Auto_Heal_All = Auto_Heal_All
-    while _G.Auto_Heal_All == true do
-        game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("HEAL_PLAYER",game:GetService("Players").LocalPlayer,9000000000)
-    end
-end,})
-----------------------------------------
-Page2.Label({Title = "Items"})
-Page2.Line({})
-Page2.Toggle({Title = "Automatic Items",ColorUI = Themes.MainColor,Default = false,callback = function(Auto_Items)
-    _G.Auto_Items = Auto_Items
-    while _G.Auto_Items == true do
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Donut")
-    task.wait(0.1)
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Bandage")
-    task.wait(0.1)
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","MedKit")
-    end
-end,})
-Page2.Button({Title = "Get Items",ColorUI = Themes.MainColor,callback = function()
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Donut")
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","Bandage")
-    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer("PICKUP_ITEM","MedKit")
-end,})
-----------------------
-Page3.Label({Title = "Characters"})
-Page3.Line({})
-Page3.Slider({Title = "WalkSpeed",Min = 16,Max = 500,Default = 16,callback = function(WalkSpeed_Player)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeed_Player
-end,ColorUI = Themes.MainColor,})
-Page3.Slider({Title = "JumpPower",Min = 50,Max = 500,Default = 50,callback = function(JumpPower_Player)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower_Player
-end,ColorUI = Themes.MainColor,})
-Page3.Button({Title = "Refresh Default",ColorUI = Themes.MainColor,callback = function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-end,})
-----------------------
-Page4.Label({Title = "Player Teleports"})
-Page4.Line({})
-local Dropdown_Player = Page4.Dropdown({Title = "Dropdown",ColorUI = Themes.MainColor,Item = players,callback = function(Select_Player_Drop)
-    Select = Select_Player_Drop
-end,})
-Page4.Button({Title = "Teleport Select Player",ColorUI = Themes.MainColor,callback = function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame
-end,})
-Page4.Button({Title = "Refresh Players",ColorUI = Themes.MainColor,callback = function()
-    table.clear(players)
-    for i,v in pairs(game:GetService("Players"):GetChildren()) do
-    table.insert(players,v.Name)
-    end
-end,})
-------------------------
-Page5.Label({Title = "Teleport Miscs"})
-Page5.Line({})
-Page5.Toggle({Title = "Ctrl + Click = TP",ColorUI = Themes.MainColor,Default = false,callback = function()
-end,})
-Page5.Label({Title = "Teleport Tool"})
-Page5.Button({Title = "Teleport Tool",ColorUI = Themes.MainColor,callback = function()
+end)
+Page_3:Line("",true)
+---------------------------------
+Page_4:Line("Teleport Miscs",false)
+Page_4:Toggle("Ctrl + Click = TP",function(Ctrl_Click_TP)
+    Ctrl_Click_TP_Callback = Ctrl_Click_TP
+    local Plr = game:GetService("Players").LocalPlayer
+    local Mouse = Plr:GetMouse()
+    Mouse.Button1Down:connect(function()
+        if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then
+            return
+        end
+        if not Mouse.Target then
+            return
+        end
+        if Ctrl_Click_TP_Callback then
+            Plr.Character:MoveTo(Mouse.Hit.p)
+        end
+    end)
+end)
+Page_4:Toggle("Ctrl + Click = Tween ??? [ Soon ]",function()
+end)
+Page_4:Button("Syrup's Tools / Teleport Tools",function()
     do
     local Tool_TP = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Teleport")
     if Tool_TP then
@@ -278,8 +311,6 @@ Page5.Button({Title = "Teleport Tool",ColorUI = Themes.MainColor,callback = func
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
     end)
     tool.Parent = game.Players.LocalPlayer.Backpack
-end,})
-Page5.Button({Title = "Tween Tool",ColorUI = Themes.MainColor,callback = function()
     do
     local Tool_Tween = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Tween Teleport")
     if Tool_Tween then
@@ -295,57 +326,58 @@ Page5.Button({Title = "Tween Tool",ColorUI = Themes.MainColor,callback = functio
     pos = CFrame.new(pos.X,pos.Y,pos.Z)
     local TweenService = game:GetService("TweenService")
     local Root = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local Info = TweenInfo.new(0.1,Enum.EasingStyle.Linear,Enum.EasingDirection.Out,0,false,0)
+    local Info = TweenInfo.new(0.5,Enum.EasingStyle.Linear,Enum.EasingDirection.Out,0,false,0)
     local Goal = {}
     Goal.CFrame = pos
     TweenService:Create(Root,Info,Goal):Play()
     end)
     tool.Parent = game.Players.LocalPlayer.Backpack
-end,})
-------------------------
-Page6.Label({Title = "Miscs"})
-Page6.Line({})
-Page6.Toggle({Title = "Fly Toggle",ColorUI = Themes.MainColor,Default = false,callback = function(Fly_Toggle_Key)
-    Fly = Fly_Toggle_Key
+end)
+Page_4:Line("",true)
+---------------------------------
+Page_5:Line("Teleport Miscs",false)
+Page_5:Toggle("Fly Toggle",function(Fly_Toggle)
+    Fly_Toggle_Callback = Fly_Toggle
     activatefly()
-end,})
-Page6.Toggle({Title = "White Screen Toggle",ColorUI = Themes.MainColor,Default = false,callback = function(White_Screen_Toggle)
-     _G.White_Screen = White_Screen_Toggle
-    if _G.White_Screen == true then
+end)
+Page_5:Toggle("White Screen Toggle",function(White_Screen_Toggle)
+    White_Screen_Toggle_Callback = White_Screen_Toggle
+    if White_Screen_Toggle_Callback == true then
         game:GetService("RunService"):Set3dRenderingEnabled(false)
     end
-    if _G.White_Screen == false then
+    if White_Screen_Toggle_Callback == false then
         game:GetService("RunService"):Set3dRenderingEnabled(true)
     end
-end,})
-Page6.Button({Title = "Copy Place ID",ColorUI = Themes.MainColor,callback = function()
-    setclipboard(Place_ID)
-end,})
-Page6.Label({Title = "Lighting Settings"})
-Page6.Line({})
-Page6.Button({Title = "Supreme Light",ColorUI = Themes.MainColor,callback = function()
+end)
+Page_5:Line("Lighting Settings",false)
+Page_5:Button("Modify Light",function()
     game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
     game.Lighting.FogEnd = 1000000000
     game.Lighting.FogColor = Color3.fromRGB(255, 255, 255)
     for i,v in pairs(game:GetService('Lighting'):GetChildren()) do
         v:Destroy()
     end
-end,})
-Page6.Button({Title = "Remove Fog",ColorUI = Themes.MainColor,callback = function()
-    for i,v in pairs(game:GetService('Lighting'):GetChildren()) do
-        v:Destroy()
-    end
-end,})
--------------------------
------------------------
+end)
+Page_5:Line("",true)
+---------------------------------
+Page_6:Line("UI Settings",false)
+Page_6:Bind("Toggle UI",Enum.KeyCode.RightControl,true,function(UI_Toggle)
+   Library:SetBind(UI_Toggle)
+end)
+Page_6:Line("",true)
+------  Settings -------
+-- Toggle_1:Set(false)
+--- Functions -------
+function doending()
+    print("work")
+end
+function getalltool()
+end
 spawn(function()
 		while task.wait() do
-			if PlayerESP then
+			if Player_ESP_Callback then
 				UpdatePlayerChams()
 			end
 		end
 end)
-----------------------------
-while task.wait() do
-    game.CoreGui.UILibrary.Main.OntopPage.LogoUI.Position = UDim2.new(0, 8, 0, 5)
-end
+---------------------
