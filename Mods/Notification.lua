@@ -435,7 +435,7 @@ messageTemplateCorner.Parent = messageTemplateFrame
 
 messageSeverityFrame.Name = "severityFrame"
 messageSeverityFrame.Parent = messageTemplateFrame
-messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+messageSeverityFrame.BackgroundColor3 = Color3.fromRGB(112, 118, 130)
 messageSeverityFrame.Size = UDim2.new(0, 10, 1, 0)
 
 messageSeverityCorner.Name = "severityCorner"
@@ -472,11 +472,11 @@ messageHeadingText.TextYAlignment = Enum.TextYAlignment.Bottom
 
 messageBodyText.Name = "bodyText"
 messageBodyText.Parent = messageInformationFrame
-messageBodyText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+messageBodyText.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageBodyText.BackgroundTransparency = 1
 messageBodyText.BorderSizePixel = 0
 messageBodyText.ClipsDescendants = true
-messageBodyText.Position = UDim2.new(0, 0, 0, 20)
+messageBodyText.Position = UDim2.new(0, 0, 0, 22)
 messageBodyText.Size = UDim2.new(1, 0, 1, -20)
 messageBodyText.Font = Enum.Font.GothamSemibold
 messageBodyText.Text = "Custom message"
@@ -489,7 +489,7 @@ messageBodyText.TextYAlignment = Enum.TextYAlignment.Top
 messageCornerHidingFrame.Name = "cornerHidingFrame"
 messageCornerHidingFrame.Parent = messageTemplateFrame
 messageCornerHidingFrame.AnchorPoint = Vector2.new(1, 0)
-messageCornerHidingFrame.BackgroundColor3 = Color3.fromRGB(233, 233, 235)
+messageCornerHidingFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 messageCornerHidingFrame.BorderSizePixel = 0
 messageCornerHidingFrame.Position = UDim2.new(1, 0, 0, 0)
 messageCornerHidingFrame.Size = UDim2.new(.1, 0, 1, 0)
