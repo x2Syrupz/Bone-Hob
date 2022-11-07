@@ -5,7 +5,7 @@ local Keys_List = {
     "--------------------- nil"
 }
 ---------------------
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Mods/Notification.lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Apis/Notification.lua"))()
 local Place_ID = game.GameId
 local Notify_Heading = "Syrup's Whitelist Service"
 local Place_List = {
