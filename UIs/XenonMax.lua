@@ -1,4 +1,4 @@
-do local ui =  game:GetService("CoreGui"):FindFirstChild("DzX Lib")  if ui then ui:Destroy() end end
+do local ui =  game:GetService("CoreGui"):FindFirstChild("Bone Hub x Xenon UI")  if ui then ui:Destroy() end end
 
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -8,7 +8,7 @@ local Mouse = LocalPlayer:GetMouse()
 
 local Atomlib = Instance.new("ScreenGui")
 
-Atomlib.Name = "DzX Lib"
+Atomlib.Name = "Bone Hub x Xenon UI"
 Atomlib.Parent = game:GetService("CoreGui")
 Atomlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -72,10 +72,10 @@ local function MakeDraggable(topbarobject, object)
 end
 
 
-local ui = {}
+local Library = {}
 
 
-function ui:Folder(namehub,namehub2,color)
+function Library:Folder(namehub,namehub2,color)
 
     local fs = false 
     local currentservertoggled = ""
