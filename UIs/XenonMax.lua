@@ -785,7 +785,7 @@ function  ems:Toggle(text,de,callback)
     local TextButton_2_Toggle = Instance.new("TextButton")
 
     TextButton_2_Toggle.Parent = ToggleButton2
-    TextButton_2_Toggle.BackgroundColor3 = color
+    TextButton_2_Toggle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
     TextButton_2_Toggle.BorderColor3 = Color3.fromRGB(249, 53, 139)
     TextButton_2_Toggle.BorderSizePixel = 0
     TextButton_2_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -801,7 +801,7 @@ function  ems:Toggle(text,de,callback)
 
 
     TextButton_3_Toggle.Parent = TextButton_2_Toggle
-    TextButton_3_Toggle.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    TextButton_3_Toggle.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
     TextButton_3_Toggle.BorderColor3 = color
     TextButton_3_Toggle.BorderSizePixel = 0
     TextButton_3_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -820,11 +820,10 @@ function  ems:Toggle(text,de,callback)
     ImageLabel_Toggle.BackgroundTransparency = 1
     ImageLabel_Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     ImageLabel_Toggle.Size = UDim2.new(0, 0, 0, 0)
-    ImageLabel_Toggle.Image = "rbxassetid://11606408342"
+    ImageLabel_Toggle.Image = "rbxassetid://11606408342" --11606408342 4485364377 9649923603 11613546596
     --ImageLabel_Toggle.ImageColor3 = Color3.fromRGB(102, 204, 102)
     ImageLabel_Toggle.AnchorPoint = Vector2.new(0.5, 0.5)
     ImageLabel_Toggle.Position = UDim2.new(0.47, 0, 0.5, 0)
-
 
     local FrameToggle = Instance.new("UICorner")
             
@@ -854,7 +853,7 @@ function  ems:Toggle(text,de,callback)
         if togdoc.boolen ==false then
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
-            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 21, 0, 21), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
+            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 20, 0, 20), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
         else
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
@@ -869,7 +868,7 @@ function  ems:Toggle(text,de,callback)
         if togdoc.boolen ==false then
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
-            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 21, 0, 21), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
+            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 20, 0, 20), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
         else
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
@@ -884,7 +883,7 @@ function  ems:Toggle(text,de,callback)
         if togdoc.boolen ==false then
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
-            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 21, 0, 21), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
+            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 20, 0, 20), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
         else
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
@@ -900,7 +899,7 @@ function  ems:Toggle(text,de,callback)
         if togdoc.boolen ==false then
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
-            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 21, 0, 21), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
+            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 20, 0, 20), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
         else
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
@@ -914,7 +913,7 @@ function  ems:Toggle(text,de,callback)
         if de == true then
             ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 27, 0, 27), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             wait(0.1)
-            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 21, 0, 21), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
+            ImageLabel_Toggle:TweenSizeAndPosition(UDim2.new(0, 20, 0, 20), UDim2.new(0.5, 0, 0.5, 0), "In", "Bounce", 0.1, true)
             togdoc.boolen = not togdoc.boolen
             pcall(callback,togdoc.boolen)
         end
