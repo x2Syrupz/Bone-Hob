@@ -254,6 +254,17 @@ function Kavo.CreateLib(kavName, themeList)
     coverup.BorderSizePixel = 0
     coverup.Position = UDim2.new(0, 0, 0.758620679, 0)
     coverup.Size = UDim2.new(0, 525, 0, 7)
+	
+    local Logo = Instance.new("ImageLabel")
+	
+    Logo.Name = "Logo"
+    Logo.Parent = Draggable_Frame
+    Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Logo.BackgroundTransparency = 1.000
+    Logo.BorderSizePixel = 0
+    Logo.Position = UDim2.new(0.00700000022, 0, 0.0500000007, 0)
+    Logo.Size = UDim2.new(0, 20, 0, 20)
+    Logo.Image = "rbxassetid://10233554882"
 
     title.Name = "title"
     title.Parent = MainHeader
