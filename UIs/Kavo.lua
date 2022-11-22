@@ -258,7 +258,7 @@ function Kavo.CreateLib(kavName, themeList)
     local Logo = Instance.new("ImageLabel")
 	
     Logo.Name = "Logo"
-    Logo.Parent = Draggable_Frame
+    Logo.Parent = MainHeader
     Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Logo.BackgroundTransparency = 1.000
     Logo.BorderSizePixel = 0
@@ -417,12 +417,13 @@ function Kavo.CreateLib(kavName, themeList)
         Objects[tabButton] = "SchemeColor"
         tabButton.Size = UDim2.new(0, 135, 0, 28)
         tabButton.AutoButtonColor = false
-        tabButton.Font = Enum.Font.Gotham
+        tabButton.Font = Enum.Font.GothamBold
         tabButton.Text = tabName
         tabButton.TextColor3 = themeList.TextColor
         Objects[tabButton] = "TextColor3"
         tabButton.TextSize = 14.000
         tabButton.BackgroundTransparency = 1
+	-- tabButton.TextXAlignment = Enum.TextXAlignment.Left
 
         if first then
             first = false
