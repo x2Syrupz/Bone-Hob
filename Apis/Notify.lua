@@ -180,7 +180,6 @@ return {
 		local Title = Properties.Title;
 		local Description = Properties.Description;
 		local Duration = Properties.Duration or 5;
-    local Sound = Properties.Sound;
 		if (Title) or (Description) then -- Check that user has provided title and/or description
 			local Y = Title and 26 or 0;
 			if (Description) then
@@ -206,9 +205,6 @@ return {
 				NewDescription.Position = UDim2.fromOffset(10, Title and 26 or 0);
 				NewDescription.TextYAlignment = Enum.TextYAlignment[Title and "Top" or "Center"];
 				NewDescription.Parent = NewLabel;
-			end
-      if (Sound) then
-				Instance.new("Sound", game:GetService("SoundService")).SoundId = "rbxassetid://"..Properties.Sound game:GetService("SoundService").Sound:Play()
 			end
 			Shadow2px().Parent = NewLabel;
 			NewLabel.Parent = Container;
