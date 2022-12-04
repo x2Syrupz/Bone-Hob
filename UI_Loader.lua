@@ -1,29 +1,24 @@
-local Keys_List = {
-    "Bone-XqIPatWjv",
-    "Bone-zzrGjQXfG",
-    "Bone-OxIahRcue",
-    "--------------------- nil"
-}
+local Keys_List = loadstring(game:HttpGet('https://pastebin.com/raw/piyYyCBY'))()
 ---------------------
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Apis/Notification.lua"))()
+local Notification_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Apis/Notify.lua"))()
+local Notification = Notification_Library.Notify
 local Place_ID = game.GameId
-local Notify_Heading = "Syrup's Whitelist Service"
 local Place_List = {
     [1701332290] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Scripts/Field_Trip_Z.lua'))()",
     [994732206] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Scripts/Blox_Fruit.lua'))()",
+    [93740418] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Scripts/Hide_and_Seek_Extreme.lua'))()",
 }
 local Whitelist_Private_Checked = 1
 local Whitelist_Checked
 for i,v in pairs(Keys_List) do
-    if Whitelist_Private_Checked == #Keys_List and Place_List[game.GameId] then
+    if Whitelist_Private_Checked == #Keys_List and not Place_List[game.GameId] then
     Keys_List = nil
-    -- warn("Not a valid key!")
-    Notification.new("message", Notify_Heading, "Invalid Key ! / Place not Supported !",0)
+    Instance.new("Sound", game:GetService("SoundService")).SoundId = "rbxassetid://9128519965" game:GetService("SoundService").Sound:Play()
+    Notification({Title = "Syrup's Notification Service",Description = "Invalid Key / Place not Supported.",Duration = 3})
     else
         if v == getgenv().Keys and Place_List[game.GameId] then
-            -- warn("Successfully whitelisted!")
-            Notification.new("message", Notify_Heading, "Correct Key ! | Place Supported !",0)
-            --Notification.new("message", Notify_Heading, "Loadded Script Successfully!",0)
+            Instance.new("Sound", game:GetService("SoundService")).SoundId = "rbxassetid://9128519965" game:GetService("SoundService").Sound:Play()
+            Notification({Title = "Syrup's Notification Service",Description = "Loadded Script Successfully!",Duration = 3})
             loadstring(Place_List[tonumber(game.GameId)])()
             Whitelist_Checked = getgenv().Keys
             Keys_List = nil
