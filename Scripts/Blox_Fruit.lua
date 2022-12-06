@@ -482,7 +482,7 @@ for i,v in pairs(game:GetService("Workspace")._WorldOrigin.PlayerSpawns.Pirates:
 end
 -----------------------
 local require_Notify = require(game.ReplicatedStorage.Notification);
-loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bone-Hub/main/Apis/Protected.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bubble-Hub/main/Apis/Protected.lua'))()
 local Data = os.date("%A")..", "..os.date("%B").." "..os.date("%d")..", "..os.date("%Y").."."
 local Player_Name = game.Players.LocalPlayer.Name
 local Place_Name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
