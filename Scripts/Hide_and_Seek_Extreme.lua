@@ -17,7 +17,7 @@ end
 local Data = os.date("%A, %B %d"..GetSubPrefix(os.date("%d"))..os.date(", %Y.")) --os.date("%A, %B %d, %Y.")
 getgenv().ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/ErenYeaker/SaveScript/main/ESP.lua"))();
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SixZensED/Discord-Library/main/Library"))()
-local Main = Library:create({Name = "Bone Hub | Scripts"})
+local Main = Library:create({Name = "Bubble Hub Scripts"})
 local Tab = Main:createtab({Name = "Main"})
 local Section1 = Tab:createsection({Name = "General"})
 local Section2 = Tab:createsection({Name = "Settings"})
