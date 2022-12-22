@@ -1,7 +1,7 @@
 local httpService = game:GetService('HttpService')
 
 local SaveManager = {} do
-	SaveManager.Folder = 'Bone Hub Scripts - Settings'
+	SaveManager.Folder = 'Color Hub Scripts - Settings'
 	SaveManager.Ignore = {}
 	SaveManager.Parser = {
 		Toggle = {
