@@ -71,7 +71,7 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:SaveDefault(theme)
-		writefile(self.Folder .. '/themes/bubble.txt', theme)
+		writefile(self.Folder .. '/themes/color.txt', theme)
 	end
 
 	function ThemeManager:CreateThemeManager(groupbox)
