@@ -5,7 +5,7 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-	    ['Bubble Hub'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00b5ff","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
+	    ['Color Hub'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00b5ff","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
 		['Default'] 		= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}') },
 		['Green'] 			= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00ff8b","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
 		['Jester'] 			= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"242424","AccentColor":"db4467","BackgroundColor":"1c1c1c","OutlineColor":"373737"}') },
@@ -48,8 +48,8 @@ local ThemeManager = {} do
 	end
 
 	function ThemeManager:LoadDefault()		
-		local theme = 'Bubble Hub'
-		local content = isfile(self.Folder .. '/themes/bubble.txt') and readfile(self.Folder .. '/themes/bubble.txt')
+		local theme = 'Color Hub'
+		local content = isfile(self.Folder .. '/themes/color.txt') and readfile(self.Folder .. '/themes/color.txt')
 
 		local isDefault = true
 		if content then
