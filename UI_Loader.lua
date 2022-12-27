@@ -1,12 +1,12 @@
 local Keys_List = loadstring(game:HttpGet('https://pastebin.com/raw/piyYyCBY'))()
 ---------------------
-local Notification_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x2Syrupz/Bubble-Hub/main/Apis/Notify.lua"))()
+local Notification_Library = loadstring(game:HttpGet("https://pastebin.com/raw/gex0Tntb"))()
 local Notification = Notification_Library.Notify
 local Place_ID = game.GameId
 local Place_List = {
-    [1701332290] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bubble-Hub/main/Scripts/Field_Trip_Z.lua'))()",
-    [994732206] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bubble-Hub/main/Scripts/Blox_Fruit.lua'))()",
-    [93740418] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Bubble-Hub/main/Scripts/Hide_and_Seek_Extreme.lua'))()",
+    [1701332290] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Color-Hub/main/Scripts/Field_Trip_Z.lua'))()",
+    [994732206] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Color-Hub/main/Scripts/Blox_Fruit.lua'))()",
+    [93740418] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/x2Syrupz/Color-Hub/main/Scripts/Hide_and_Seek_Extreme.lua'))()",
 }
 local Whitelist_Private_Checked = 1
 local Whitelist_Checked
