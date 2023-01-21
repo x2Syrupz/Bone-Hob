@@ -5,19 +5,18 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-	    ['Color Hub'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00b5ff","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
-		['Default'] 		= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"ffffff","BackgroundColor":"141414","OutlineColor":"323232"}') },
-		['Green'] 			= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00ff8b","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
-		['Jester'] 			= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"242424","AccentColor":"db4467","BackgroundColor":"1c1c1c","OutlineColor":"373737"}') },
-		['Mint'] 			= { 5, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"242424","AccentColor":"3db488","BackgroundColor":"1c1c1c","OutlineColor":"373737"}') },
-		['Tokyo Night'] 	= { 6, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"191925","AccentColor":"6759b3","BackgroundColor":"16161f","OutlineColor":"323232"}') },
-		['Ubuntu'] 			= { 7, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"3e3e3e","AccentColor":"e2581e","BackgroundColor":"323232","OutlineColor":"191919"}') },
-		['Xenon Hub V1'] 	= { 8, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"000f1e","AccentColor":"00b4f0","BackgroundColor":"050514","OutlineColor":"0a1e28"}') },
-		['Xenon Hub V2'] 	= { 9, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3c3c","BackgroundColor":"16161f","OutlineColor":"323232"}') },
-		['Deity Hub Next Generation'] 	= { 10, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0dddff","BackgroundColor":"141414","OutlineColor":"323232"}') },
-		['Paper Box'] 	= { 11, httpService:JSONDecode('{"FontColor":"eae6df","MainColor":"2d2d2b","AccentColor":"d4c8be","BackgroundColor":"b8926a","OutlineColor":"b0b0b0"}') },
-		['Alien'] 	= { 12, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"9ede01","BackgroundColor":"33025f","OutlineColor":"08000c"}') },
-		['Cotton Candy'] 	= { 13, httpService:JSONDecode('{"FontColor":"fed8ff","MainColor":"242424","AccentColor":"ff9bea","BackgroundColor":"232323","OutlineColor":"3c3c3c"}') },
+	    ['Color Hub'] 		= { 1, httpService:JSONDecode('{"MainColor":"292929","AccentColor":"0084ff","OutlineColor":"000000","BackgroundColor":"303030","FontColor":"ffffff"}') },
+		['Green'] 			= { 2, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"141414","AccentColor":"00ff8b","BackgroundColor":"1c1c1c","OutlineColor":"3c3c3c"}') },
+		['Jester'] 			= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"242424","AccentColor":"db4467","BackgroundColor":"1c1c1c","OutlineColor":"373737"}') },
+		['Mint'] 			= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"242424","AccentColor":"3db488","BackgroundColor":"1c1c1c","OutlineColor":"373737"}') },
+		['Tokyo Night'] 	= { 5, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"191925","AccentColor":"6759b3","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+		['Ubuntu'] 			= { 6, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"3e3e3e","AccentColor":"e2581e","BackgroundColor":"323232","OutlineColor":"191919"}') },
+		['Xenon Hub V1'] 	= { 7, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"000f1e","AccentColor":"00b4f0","BackgroundColor":"050514","OutlineColor":"0a1e28"}') },
+		['Xenon Hub V2'] 	= { 8, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"181825","AccentColor":"ff3c3c","BackgroundColor":"16161f","OutlineColor":"323232"}') },
+		['Deity Hub'] 	= { 9, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1c1c1c","AccentColor":"0dddff","BackgroundColor":"141414","OutlineColor":"323232"}') },
+		['Paper Box'] 	= { 10, httpService:JSONDecode('{"FontColor":"eae6df","MainColor":"2d2d2b","AccentColor":"d4c8be","BackgroundColor":"b8926a","OutlineColor":"b0b0b0"}') },
+		['Alien'] 	= { 11, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1b1b1b","AccentColor":"9ede01","BackgroundColor":"33025f","OutlineColor":"08000c"}') },
+		['Cotton Candy'] 	= { 12, httpService:JSONDecode('{"FontColor":"fed8ff","MainColor":"242424","AccentColor":"ff9bea","BackgroundColor":"232323","OutlineColor":"3c3c3c"}') },
 	}
 
 	function ThemeManager:ApplyTheme(theme)
